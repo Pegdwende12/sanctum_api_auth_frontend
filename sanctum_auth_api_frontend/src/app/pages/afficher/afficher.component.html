@@ -1,0 +1,37 @@
+
+
+<div class="container">
+
+    <h1>Liste des contacts</h1>
+    <a href="" routerLink="" class="btn btn-success">Ajouter</a>
+     <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Prenom</th>
+          <th scope="col">email</th>
+          <th scope="col">telephone</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+          
+          <tr *ngFor="let contact of contacts">
+    
+            <th scope="row">{{contact.id }}</th>
+            <td>{{ contact.nom }}</td>
+            <td>{{ contact.prenom }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.telephone }}</td>
+    
+            <td>
+              
+              <a class="btn btn-primary btn-sm mt-4"  routerLink="">Edit</a>
+              <button type="button" class="btn btn-danger">Delete</button>
+    
+            </td>
+    
+          </tr>
+      </tbody>
+    </table>
